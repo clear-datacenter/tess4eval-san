@@ -11,7 +11,7 @@ cache:
   - jar
   
 before_install:
-# - bash ./createcache.sh
+- bash ./createcache.sh
 
 - ls imageshin-save/imageshin
 - ls imagesbih-save/imagesbih
@@ -20,7 +20,7 @@ before_install:
 
 install:
 - SHA=$(git rev-parse  --short HEAD) 
-- bash ./installtesseract.sh
+# - bash ./installtesseract.sh
 
 script:
 # - bash ./runtesseract.sh
