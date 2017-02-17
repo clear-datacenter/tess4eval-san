@@ -13,7 +13,7 @@ cache:
 before_install:
 - bash ./createcache.sh
 - ls imageshin-save/imageshin
-- ls imagessan-save/imagesbih
+- ls imagesbih-save/imagesbih
 - ls IIIT_Hindi_100-save/IIIT_Hindi_100/GT
 - ls IIIT_Hindi_100-save/IIIT_Hindi_100/Images
 
