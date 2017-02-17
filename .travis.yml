@@ -2,7 +2,7 @@ dist: trusty
 sudo: required
 language: java
 git:
-  depth: 1
+  depth: 3
 cache:
   directories:
   - imagesbih-save
