@@ -1,5 +1,9 @@
 #!/bin/bash
 
+- mkdir ./out
+- mkdir ./ocr
+- mkdir ./gt
+
 cd ${TRAVIS_BUILD_DIR}/imageshin-save/imageshin
 echo "Images from Shreeshrii/imageshin"
     img_files=$(ls *.png)
