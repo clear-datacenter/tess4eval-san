@@ -6,8 +6,6 @@ echo "cache already built, if running these commands, clear cache dirs first"
 
    git submodule add https://github.com/Shreeshrii/imagesbih
    mv /home/travis/build/Shreeshrii/tess4eval/imagesbih imagesbih-save
-   ls imagesbih-save
-   ls imagesbih-save/imagesbih
    
 #   git submodule add https://github.com/Shreeshrii/imageshin
 #   mv /home/travis/build/Shreeshrii/tess4eval/imageshin imageshin-save
