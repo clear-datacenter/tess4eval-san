@@ -11,7 +11,8 @@ cache:
   - jar
   
 before_install:
-- bash ./createcache.sh
+# - bash ./createcache.sh
+
 - ls imageshin-save/imageshin
 - ls imagesbih-save/imagesbih
 - ls IIIT_Hindi_100-save/IIIT_Hindi_100/GT
@@ -22,7 +23,7 @@ install:
 - sudo add-apt-repository ppa:alex-p/tesseract-ocr -y
 - sudo apt-get update -q
 - sudo apt-get install tesseract-ocr -y
-- sudo apt-get install tesseract-ocr-hin  tesseract-ocr-san -y
+- sudo apt-get install tesseract-ocr-hin   -y
 - ls /usr/share/tesseract-ocr/4.00/tessdata
 - tesseract -v
 - tesseract --list-langs
@@ -39,6 +40,7 @@ script:
 
 after_script:
 - cd ./out
+- cp ./gt_out.html ./index-${SHA}.html
 - mv ./gt_out.html ./index.html
 - git init
 - git add --all .
