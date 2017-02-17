@@ -10,6 +10,13 @@ cache:
   - IIIT_Hindi_100-save
   - jar
   
+before_install:
+- bash ./createcache.sh
+- ls imageshin-save/imageshin
+- ls imagessan-save/imagesbih
+- ls IIIT_Hindi_100-save/IIIT_Hindi_100/GT
+- ls IIIT_Hindi_100-save/IIIT_Hindi_100/Images
+
 install:
 - SHA=$(git rev-parse  --short HEAD) 
 - sudo add-apt-repository ppa:alex-p/tesseract-ocr -y
@@ -22,11 +29,6 @@ install:
 - tesseract ./tif/phototest.tif stdout --oem 1 -l eng
 
 before_script:
-- bash ./createcache.sh
-- ls imageshin-save/imageshin
-- ls imagessan-save/imagesbih
-- ls IIIT_Hindi_100-save/IIIT_Hindi_100/GT
-- ls IIIT_Hindi_100-save/IIIT_Hindi_100/Images
 - mkdir ./out
 - mkdir ./ocr
 - mkdir ./gt
