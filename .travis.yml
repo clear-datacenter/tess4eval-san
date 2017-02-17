@@ -21,6 +21,7 @@ before_install:
 
 install:
 - SHA=$(git rev-parse  --short HEAD) 
+- echo ${SHA}
 # - bash ./installtesseract.sh
 
 script:
