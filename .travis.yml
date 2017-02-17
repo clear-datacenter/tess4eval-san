@@ -22,11 +22,6 @@ install:
 - SHA=$(git rev-parse  --short HEAD) 
 - bash ./installtesseract.sh
 
-before_script:
-- mkdir ./out
-- mkdir ./ocr
-- mkdir ./gt
-
 script:
 # - bash ./runtesseract.sh
 # - java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt ./gt -ocr ./ocr  utf8   -d ./out
