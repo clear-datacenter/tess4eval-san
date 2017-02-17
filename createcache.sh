@@ -7,8 +7,8 @@ echo "cache already built, if running these commands, clear cache dirs first"
    git submodule add https://github.com/Shreeshrii/imagesbih
    mv /home/travis/build/Shreeshrii/tess4eval/imagesbih imagesbih-save
    
-#   git submodule add https://github.com/Shreeshrii/imageshin
-#   mv /home/travis/build/Shreeshrii/tess4eval/imageshin imageshin-save
+   git submodule add https://github.com/Shreeshrii/imageshin
+   mv /home/travis/build/Shreeshrii/tess4eval/imageshin imageshin-save
    
 #   wget -O ./IIIT_Hindi_100.zip  http://ocr.iiit.ac.in/IIIT_Hindi_100.zip
 #   unzip ./IIIT_Hindi_100.zip
