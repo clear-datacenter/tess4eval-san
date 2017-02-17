@@ -11,24 +11,19 @@ cache:
   - IIIT_Hindi_100-save
   - jar
   
-before_install:
+before_script:
 - bash ./createcache.sh
-
 - ls imageshin-save/imageshin
 - ls imagesbih-save/imagesbih
 - ls IIIT_Hindi_100-save/IIIT_Hindi_100/GT
 - ls IIIT_Hindi_100-save/IIIT_Hindi_100/Images
 
-install:
+script:
 - SHA=$(git rev-parse  --short HEAD) 
 - echo ${SHA}
 # - bash ./installtesseract.sh
-
-script:
 # - bash ./runtesseract.sh
 # - java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt ./gt -ocr ./ocr  utf8   -d ./out
-
-after_script:
 # - bash ./deploy.sh
 
 env:
