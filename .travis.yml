@@ -5,7 +5,7 @@ git:
   depth: 1
 cache:
   directories:
-  - imagessan-save
+  - imagesbih-save
   - imageshin-save
   - IIIT_Hindi_100-save
   - jar
@@ -24,7 +24,7 @@ install:
 before_script:
 - bash ./createcache.sh
 - ls imageshin-save/imageshin
-- ls imagessan-save/imagessan
+- ls imagessan-save/imagesbih
 - ls IIIT_Hindi_100-save/IIIT_Hindi_100/GT
 - ls IIIT_Hindi_100-save/IIIT_Hindi_100/Images
 - mkdir ./out
