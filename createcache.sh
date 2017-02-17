@@ -6,11 +6,11 @@ echo "cache already built, if running these commands, clear cache dirs first"
 
    rm -rf imagesbih-save
    git submodule add https://github.com/Shreeshrii/imagesbih
-   mv /home/travis/build/Shreeshrii/tess4eval/imagesbih imagesbih-save
+   mv /home/travis/build/Shreeshrii/tess4eval/imagesbih imagesbih/imagesbih-save
    
    rm -rf imageshin-save
    git submodule add https://github.com/Shreeshrii/imageshin
-   mv /home/travis/build/Shreeshrii/tess4eval/imageshin imageshin-save
+   mv /home/travis/build/Shreeshrii/tess4eval/imageshin imageshin/imageshin-save
    
 #   wget -O ./IIIT_Hindi_100.zip  http://ocr.iiit.ac.in/IIIT_Hindi_100.zip
 #   unzip ./IIIT_Hindi_100.zip
