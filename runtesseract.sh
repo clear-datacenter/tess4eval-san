@@ -11,7 +11,7 @@ echo "Images from Shreeshrii/imageshin"
         filename=$(basename "${img_file##*/}" .png)
         echo ${img_file}
         cp ${filename}.txt ${TRAVIS_BUILD_DIR}/gt
-        tesseract ${img_file} ${TRAVIS_BUILD_DIR}/ocr/${filename} --psm 6 --oem 1 -l hin 
+        time tesseract ${img_file} ${TRAVIS_BUILD_DIR}/ocr/${filename} --psm 6 --oem 1 -l hin 
     done   
     
  cd ${TRAVIS_BUILD_DIR}/IIIT_Hindi_100-save/IIIT_Hindi_100
@@ -32,6 +32,6 @@ echo "Images from Shreeshrii/imageshin"
         filename=$(basename "${img_file##*/}" .tif)
         echo ${img_file}
         cp ${filename}.txt ${TRAVIS_BUILD_DIR}/gt
-        tesseract  ${img_file}  ${TRAVIS_BUILD_DIR}/ocr/${filename} --psm 6 --oem 1 -l hin 
+        time tesseract  ${img_file}  ${TRAVIS_BUILD_DIR}/ocr/${filename} --psm 6 --oem 1 -l hin 
     done   
         
