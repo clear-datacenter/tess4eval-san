@@ -13,6 +13,9 @@ cache:
   - tess4-save
   
 before_script:
+- SHA=$(git rev-parse  --short HEAD) 
+- echo ${SHA}
+- echo ${SHA_SHORT}
 - bash ./createcache.sh
 - ls jar
 - ls tess4-save
@@ -22,9 +25,6 @@ before_script:
 - ls IIIT_Hindi_100-save/IIIT_Hindi_100/Images
 
 script:
-- SHA=$(git rev-parse  --short HEAD) 
-- echo ${SHA}
-- echo ${SHA_SHORT}
 - bash ./installtesseract.sh
 - bash ./runtesseract.sh
 - java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt ./gt -ocr ./ocr  utf8   -d ./out
