@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install libwebp
+sudo apt-get install libwebp5
 
 sudo dpkg -i  ./tess4-save/libopenjp2.deb 
 sudo apt-get install -f
