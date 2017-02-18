@@ -27,7 +27,7 @@ echo "Images from Shreeshrii/imageshin"
        
  cd ${TRAVIS_BUILD_DIR}/imagesbih-save/imagesbih
  echo "Images from Shreeshrii/imagesbih - png files "
-    img_files=$(ls bih.*.png)
+    img_files=$(ls *.png)
     for img_file in ${img_files}; do
         filename=$(basename "${img_file##*/}" .png)
         echo ${img_file}
