@@ -26,8 +26,8 @@ echo "Images from Shreeshrii/imageshin"
     done   
        
  cd ${TRAVIS_BUILD_DIR}/imagesbih-save/imagesbih
- echo "Images from Shreeshrii/imagesbih - only starting with A"
-    img_files=$(ls bih.A*.tif)
+ echo "Images from Shreeshrii/imagesbih - Files too big, ignore "
+    img_files=$(ls bih.Z*.tif)
     for img_file in ${img_files}; do
         filename=$(basename "${img_file##*/}" .tif)
         echo ${img_file}
