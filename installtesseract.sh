@@ -1,10 +1,27 @@
 #!/bin/bash
 
-sudo add-apt-repository ppa:alex-p/tesseract-ocr -y
-sudo apt-get update -q
-sudo apt-get install tesseract-ocr -y
-sudo apt-get install tesseract-ocr-hin   -y
+sudo apt-get install libwebp
+
+sudo dpkg -i  ./tess4-save/libopenjp2.deb 
+sudo apt-get install -f
+sudo dpkg -i  ./tess4-save/liblept5.deb 
+sudo apt-get install -f
+
+sudo dpkg -i  ./tess4-save/libtesseract4.deb 
+sudo apt-get install -f
+
+sudo dpkg -i  ./tess4-save/tesseract-ocr-osd.deb 
+sudo apt-get install -f
+sudo dpkg -i  ./tess4-save/tesseract-ocr-eng.deb 
+sudo apt-get install -f
+sudo dpkg -i  ./tess4-save/tesseract-ocr-hin.deb 
+sudo apt-get install -f
+
+sudo dpkg -i  ./tess4-save/tesseract-ocr.deb 
+sudo apt-get install -f
+
 ls /usr/share/tesseract-ocr/4.00/tessdata
+
 tesseract -v
 tesseract --list-langs
 tesseract ./tif/phototest.tif stdout --oem 1 -l eng
