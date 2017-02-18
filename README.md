@@ -1,4 +1,4 @@
-# tess4eval
+# Evaluate 4.0.0-alpha LSTM engine of tesseract OCR for Hindi
 
 ## Uses
 
@@ -12,3 +12,8 @@
 * [Synthetic Images Dataset from dev-ocr](https://sourceforge.net/projects/dev-ocr/files/Data%20For%20Training%20Testing/)
 * [Hindi Images from Shreeshrii/imageshin](https://github.com/shreeshrii/imageshin)
 * [Images in Bihari Languages from Shreeshrii/imagesbih](https://github.com/shreeshrii/imagesbih)
+
+## OCR evaluation reports
+
+* [Hindi and Bihari languages OCR evaluation report](https://shreeshrii.github.io/tess4eval/)
+
