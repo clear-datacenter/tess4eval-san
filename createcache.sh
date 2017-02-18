@@ -12,8 +12,8 @@ echo "create cache"
 
 #   wget -O ./jar/ocrevaluation.jar https://bintray.com/impactocr/maven/download_file?file_path=eu%2Fdigitisation%2FocrevalUAtion%2F1.3.0%2FocrevalUAtion-1.3.0-jar-with-dependencies.jar
 
-   rm -rf imagesbih-sav
-   mkdir imagesbih-sav
+   rm -rf imagesbih-save
+   mkdir imagesbih-save
    git submodule add https://github.com/Shreeshrii/imagesbih
    mv /home/travis/build/Shreeshrii/tess4eval/imagesbih imagesbih-save
    
