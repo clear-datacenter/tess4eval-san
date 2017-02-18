@@ -13,7 +13,7 @@ cache:
   - tess4-save
   
 before_script:
-# - bash ./createcache.sh
+- bash ./createcache.sh
 - ls jar
 - ls tess4-save
 - ls imageshin-save/imageshin
