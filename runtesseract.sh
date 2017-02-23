@@ -15,9 +15,9 @@ echo "Images from Shreeshrii/imageshin"
     done   
     
  cd ${TRAVIS_BUILD_DIR}/IIIT_Hindi_100-save/IIIT_Hindi_100
- echo "Images from http://ocr.iiit.ac.in/Hindi100.html"
+ echo "NOT USING Images from http://ocr.iiit.ac.in/Hindi100.html"
  cd Images
-     img_files=$(ls *.jpg)
+    img_files=$(ls ZZZ*.jpg)
     for img_file in ${img_files}; do
         filename=$(basename "${img_file##*/}" .jpg)
         echo ${img_file}
