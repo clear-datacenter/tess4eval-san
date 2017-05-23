@@ -8,9 +8,9 @@ cache:
   directories:
   - imagesbih-save
   - imageshin-save
-  - IIIT_Hindi_100-save
   - jar
   - tess4-save
+  - tess4data-save
   
 before_script:
 - SHA=$(git rev-parse  --short HEAD) 
@@ -18,6 +18,7 @@ before_script:
 - bash ./createcache.sh
 - ls jar
 - ls tess4-save
+- ls tess4data-save
 - ls imageshin-save/imageshin
 - ls imagesbih-save/imagesbih
 
