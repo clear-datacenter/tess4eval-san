@@ -1,5 +1,8 @@
 #!/bin/bash
 
+DATE=$(date +%F)
+echo ${DATE}
+
 cd ./out
 
 cp ./gt_out.html ./index-${DATE}.html
