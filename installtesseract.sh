@@ -15,10 +15,13 @@ sudo apt-get install -f
 sudo dpkg -i  ./tess4-save/tesseract-ocr-hin.deb 
 sudo apt-get install -f
 
+sudo dpkg -i  ./tess4-save/libtesseract4.deb 
+sudo apt-get install -f
+
 sudo dpkg -i  ./tess4-save/tesseract-ocr.deb 
 sudo apt-get install -f
 
-cp ./tess4data-save/bih.traineddata /usr/share/tesseract-ocr/4.00/tessdata
+sudo cp ./tess4data-save/bih.traineddata /usr/share/tesseract-ocr/4.00/tessdata
 
 ls /usr/share/tesseract-ocr/4.00/tessdata
 
