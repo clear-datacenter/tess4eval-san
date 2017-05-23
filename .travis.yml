@@ -20,8 +20,6 @@ before_script:
 - ls tess4-save
 - ls imageshin-save/imageshin
 - ls imagesbih-save/imagesbih
-- ls IIIT_Hindi_100-save/IIIT_Hindi_100/GT
-- ls IIIT_Hindi_100-save/IIIT_Hindi_100/Images
 
 script:
 - bash ./installtesseract.sh
