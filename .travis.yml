@@ -15,7 +15,7 @@ cache:
 before_script:
 - SHA=$(git rev-parse  --short HEAD) 
 - echo ${SHA}
-- bash ./createcache.sh
+
 - ls jar
 - ls tess4-save
 - ls tess4data-save
