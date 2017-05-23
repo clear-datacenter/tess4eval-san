@@ -3,7 +3,6 @@ sudo: required
 language: java
 git:
   depth: 3
-  
 cache:
   directories:
   - imagesbih-save
@@ -11,21 +10,19 @@ cache:
   - jar
   - tess4-save
   - tess4data-save
-  
 before_script:
 - ls jar
 - ls tess4-save
 - ls tess4data-save
 - ls imageshin-save/imageshin
 - ls imagesbih-save/imagesbih
-
 script:
 - bash ./installtesseract.sh
 - bash ./runtesseract.sh
-- java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt ./gt -ocr ./ocr  utf8   -d ./out
+- java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt ./gt -ocr ./ocr  utf8   -d
+  ./out
 - bash ./deploy.sh
-
 env:
   global:
-  - GITHUB_REPO: "Shreeshrii/tess4eval"
- 
+  - GITHUB_REPO: Shreeshrii/tess4eval
+  - secure: h6rE9H+e5INT+0u5ulE8tGSIEAb2tjGBjw5/sPWOQFpwev3PvVDUKa94Vf7bSm5COEIjpZ4Wplu9NBb017/nCNBZSjKitdJXbUVUVz1DLVCkqBkwY7VXskMKyOCpokoriZzDYPQSVkf4XLBGYWKAhy5/RyELj7KPWK+2pOsk/AHXa0YkfRaTcB0L14v2jY/KZcKyWCyOGrKUCoLvsvPjb2nXewmAg7tM7YQtFT2VZEFK6nOFt1hdLnR5f31NzW3MUhgVE4DIgVzjuuA09jAwD4CebgaXPLyD2Bflm3g0WYsjzbriLnPgFlmXUkNhD8IdBUcMa+zbwEqZ0lHp+ikp9QgS9HaQN4k/see2hqndW46jwxJGDHNW0N6mnt/aQgC2Stk8szRY74LSDvnp6i07dAu5QPiEG4pZrnEGu53I91mnRWVQKQ7MZQb9GM6ntBXAI+K9JI42q4AgitxhfVvZqQ/PJqtmFQ6kMxJloQ+GlE+MkXnDyb/lvW530l9WT1YdBmu2mLt1tSzNZlLIb976Kunl8yX9ojOCvexJtccgNoIJtia8l2je5J0atP/vgj6Z1Sb/K3JZk1Qi+6Ze+GcW/sZp1cynvoID78MmZ9FM2ByPu/mVXwST0gVws9EM700rW8sG01llIWmkauXhNXUZxV5xf4cHEubsnaPH2xzKyQU=
