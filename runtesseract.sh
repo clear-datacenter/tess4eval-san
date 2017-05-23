@@ -14,17 +14,7 @@ echo "Images from Shreeshrii/imageshin"
         tesseract ${img_file} ${TRAVIS_BUILD_DIR}/ocr/${filename} --psm 6 --oem 1 -l hin 
     done   
     
- cd ${TRAVIS_BUILD_DIR}/IIIT_Hindi_100-save/IIIT_Hindi_100
- echo "NOT USING Images from http://ocr.iiit.ac.in/Hindi100.html"
- cd Images
-    img_files=$(ls ZZZ*.jpg)
-    for img_file in ${img_files}; do
-        filename=$(basename "${img_file##*/}" .jpg)
-        echo ${img_file}
-        cp ../GT/${filename}.txt ${TRAVIS_BUILD_DIR}/gt
-        tesseract  ${img_file}  ${TRAVIS_BUILD_DIR}/ocr/${filename} --psm 6 --oem 1 -l hin 
-    done   
-       
+      
  cd ${TRAVIS_BUILD_DIR}/imagesbih-save/imagesbih
  echo "Images from Shreeshrii/imagesbih - png files "
     img_files=$(ls *.png)
