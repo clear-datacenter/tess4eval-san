@@ -1,6 +1,8 @@
 #!/bin/bash
 
 echo "create cache"
+DATE=$(date +%F)
+echo ${DATE}
 
 rm -rf ./jar
 mkdir ./jar
