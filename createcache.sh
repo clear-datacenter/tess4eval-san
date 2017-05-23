@@ -16,7 +16,11 @@ mkdir ./tess4-save
 
 rm ./tess4-save/libtesseract4.deb
 wget -O ./tess4-save/libtesseract4.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/libtesseract4_4.00~git1987-8bd2fa7-1ppa1~trusty1_amd64.deb
- 
+
+rm -rf ./tess4data-save
+mkdir ./tess4data-save
+wget -O ./tess4data-save/bih.traineddata https://github.com/Shreeshrii/tessdata4alpha/raw/master/bih.traineddata
+
    rm -rf imagesbih-save
    mkdir imagesbih-save
    git submodule add https://github.com/Shreeshrii/imagesbih
