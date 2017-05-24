@@ -21,7 +21,7 @@ script:
 - bash ./1createcache.sh
 - bash ./2installtesseract.sh
 - bash ./3get-gh-pages.sh
-- bash ./4runtesseract.sh
+- bash ./5runtesseract.sh
 - java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt $TRAVIS_BUILD_DIR/gt -ocr $TRAVIS_BUILD_DIR/$LANG     utf8 -d $TRAVIS_BUILD_DIR/out
 - mv $TRAVIS_BUILD_DIR/out/gt_out.html $TRAVIS_BUILD_DIR/out/gt_$LANG.html
 - java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt $TRAVIS_BUILD_DIR/gt -ocr $TRAVIS_BUILD_DIR/$LANGTWO  utf8 -d $TRAVIS_BUILD_DIR/out
