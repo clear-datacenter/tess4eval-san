@@ -16,10 +16,10 @@ cache:
   - tess4-save
   - tess4data-save
 before_script:
-- echo "before script, bash ./0createcache.sh"
-script:
-- bash ./1createcache.sh
+- echo "bash ./0createcache.sh"
+- echo "bash ./1createcache.sh"
 - bash ./2installtesseract.sh
+script:
 - bash ./3get-gh-pages.sh
 - bash ./5runtesseract.sh
 - java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt $TRAVIS_BUILD_DIR/gt -ocr $TRAVIS_BUILD_DIR/$LANG     utf8 -d $TRAVIS_BUILD_DIR/out
