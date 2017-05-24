@@ -21,4 +21,9 @@ script:
 - java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main -gt ./gt -ocr ./ocr utf8
   -d ./out
 - bash ./deploy.sh
-
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
