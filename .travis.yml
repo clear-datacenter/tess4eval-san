@@ -12,13 +12,15 @@ cache:
   directories:
   - imagesbih-save
   - imageshin-save
+  - imagessan-save
   - jar
   - tess4-save
   - tess4data-save
+  - tess4dev-save
 
 before_install:
 - echo "bash ./0createcache.sh"
-- echo "bash ./1createcache.sh"
+- bash ./1createcache.sh
 
 install:
 - bash ./2installtesseract.sh
