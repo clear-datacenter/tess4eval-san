@@ -1,6 +1,9 @@
 dist: trusty
 sudo: required
 language: java
+env:
+  global:
+  - GITHUB_REPO: Shreeshrii/tess4eval
 git:
   depth: 3
 cache:
@@ -11,17 +14,11 @@ cache:
   - tess4-save
   - tess4data-save
 before_script:
-- ls jar
-- ls tess4-save
-- ls tess4data-save
-- ls imageshin-save/imageshin
-- ls imagesbih-save/imagesbih
+- echo "before script, add create cache here, when needed"
 script:
 - bash ./installtesseract.sh
 - bash ./runtesseract.sh
 - java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main -gt ./gt -ocr ./ocr utf8
   -d ./out
 - bash ./deploy.sh
-env:
-  global:
-  - GITHUB_REPO: Shreeshrii/tess4eval
+
