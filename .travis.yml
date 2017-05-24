@@ -19,7 +19,7 @@ before_script:
 - echo "before script, bash ./0createcache.sh"
 script:
 - bash ./1createcache.sh
-- bash ./2installesseract.sh
+- bash ./2installtesseract.sh
 - bash ./3get-gh-pages.sh
 - bash ./4runtesseract.sh
 - java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt ./gt -ocr ./$LANG     utf8 -d ./out
