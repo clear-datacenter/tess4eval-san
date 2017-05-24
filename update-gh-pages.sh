@@ -15,5 +15,5 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
   git push -fq origin gh-pages > /dev/null
   
-  echo -e "Done magic :-) Updated https://shreeshrii.github.io/tess4eval_marathi/  \n"
+  echo -e "Done magic :-) Updated https://shreeshrii.github.io/tess4eval/  \n"
 fi
