@@ -1,8 +1,6 @@
 #!/bin/bash
 
 echo "create cache"
-DATE=$(date +%F)
-echo ${DATE}
 
 rm -rf ./jar
 mkdir ./jar
@@ -16,13 +14,7 @@ wget -O ./jar/ocrevaluation.jar https://bintray.com/impactocr/maven/download_fil
  wget -O ./tess4-save/tesseract-ocr-osd.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/tesseract-ocr-osd_4.00~git11-8bf2e7a-2ppa1~trusty1_all.deb
  wget -O ./tess4-save/tesseract-ocr-hin.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/tesseract-ocr-hin_4.00~git11-8bf2e7a-2ppa1~trusty1_all.deb
  wget -O ./tess4-save/tesseract-ocr.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/tesseract-ocr_4.00~git1759-a011b15-1ppa1~trusty1_amd64.deb
- wget -O ./tess4-save/libtesseract4.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/libtesseract4_4.00~git1987-8bd2fa7-1ppa1~trusty1_amd64.deb
- wget -O ./tess4-save/tesseract-ocr.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/tesseract-ocr_4.00~git1987-8bd2fa7-1ppa1~trusty1_amd64.deb
-
- rm -rf ./tess4data-save
- mkdir ./tess4data-save
- wget -O ./tess4data-save/bih.traineddata https://github.com/Shreeshrii/tessdata4alpha/raw/master/bih.traineddata
-
+ 
    rm -rf imagesbih-save
    mkdir imagesbih-save
    git submodule add https://github.com/Shreeshrii/imagesbih
@@ -31,9 +23,4 @@ wget -O ./jar/ocrevaluation.jar https://bintray.com/impactocr/maven/download_fil
    rm -rf imageshin-save
    mkdir imageshin-save
    git submodule add https://github.com/Shreeshrii/imageshin
-   mv /home/travis/build/Shreeshrii/tess4eval/imageshin imageshin-save
-   
-#   wget -O ./IIIT_Hindi_100.zip  http://ocr.iiit.ac.in/IIIT_Hindi_100.zip
-#   unzip ./IIIT_Hindi_100.zip
-#   mv ./IIIT_Hindi_100 IIIT_Hindi_100-save
-   
+   mv /home/travis/build/Shreeshrii/tess4eval/imageshin imageshin-save 
