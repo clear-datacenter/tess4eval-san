@@ -4,6 +4,7 @@ language: java
 env:
   global:
   - LANG: hin
+  - LANGTWO: bih
   - GITHUB_REPO: Shreeshrii/tess4eval
 git:
   depth: 3
@@ -18,6 +19,11 @@ before_script:
 - echo "before script, add create cache here, when needed"
 script:
 - bash ./installtesseract.sh
+- bash ./get-gh-pages.sh
 - bash ./runtesseract.sh
-- java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main -gt ./gt -ocr ./ocr utf8 -d ./out
+- java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt ./gt -ocr ./$LANG  utf8   -d   ./out
+- mv ./out/gt_out.html ./out/gt_$LANG.html
+- java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt ./gt -ocr ./$LANGTWO  utf8   -d   ./out
+- mv ./out/gt_out.html ./out/gt_$LANGTWO.html
 - bash ./deploy.sh
+- bash ./update-gh-pages.sh
