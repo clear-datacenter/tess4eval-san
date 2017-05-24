@@ -5,7 +5,7 @@ mkdir ${TRAVIS_BUILD_DIR}/${LANGTWO}
 mkdir ${TRAVIS_BUILD_DIR}/gt
 mkdir $TRAVIS_BUILD_DIR/out
 
-cd ${TRAVIS_BUILD_DIR}/imagessan-save/imageshin/groundtruthimages
+cd ${TRAVIS_BUILD_DIR}/imagessan-save/imagessan/groundtruthimages
 echo "Images from Shreeshrii/imagessan"
     img_files=$(ls *.png)
     for img_file in ${img_files}; do
