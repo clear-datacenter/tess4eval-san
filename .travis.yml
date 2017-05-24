@@ -4,7 +4,6 @@ language: java
 env:
   global:
   - LANG: hin
-  - DATE: ($date +%F)
   - GITHUB_REPO: Shreeshrii/tess4eval
 git:
   depth: 3
