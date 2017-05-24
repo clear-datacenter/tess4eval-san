@@ -26,7 +26,10 @@ echo "Images from Shreeshrii/imageshin"
         cp ${filename}.txt ${TRAVIS_BUILD_DIR}/gt
         tesseract  ${img_file}  ${TRAVIS_BUILD_DIR}/ocr/${filename} --psm 6 --oem 1 -l $LANG 
     done   
-        
+
+cd ${TRAVIS_BUILD_DIR}
+java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main -gt ./gt -ocr ./ocr utf8 -d ./out
+
 DATE=$(date +%d/%m/%Y_%H:%M:%S)
 echo ${DATE}
 
