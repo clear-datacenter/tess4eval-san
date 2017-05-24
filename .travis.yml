@@ -18,3 +18,5 @@ before_script:
 script:
 - bash ./installtesseract.sh
 - bash ./runtesseract.sh
+- java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main -gt ./gt -ocr ./ocr utf8 -d ./out
+- bash ./deploy.sh
