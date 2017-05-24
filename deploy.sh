@@ -1,14 +1,11 @@
 #!/bin/bash
 
-DATE=$(date +%d/%m/%Y)
-echo ${DATE}
- 
-cd ./out
+cd $TRAVIS_BUILD_DIR/out
 
-cp ./gt_out.html ./index-${DATE}.html
-mv ./gt_out.html ./index.html
+cp gt_$LANG.html index-$LANG-$TRAVIS_BUILD_NUMBER.html
+mv gt_$LANG.html index-$LANG.html
 
-git init
-git add ./index.html  ./index-${DATE}.html
-git commit -m  "${DATE} - Update https://shreeshrii.github.io/tess4eval/ index Pages" 
-git push  --force https://user:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git master:gh-pages
+cp gt_$LANGTWO.html index-$LANGTWO-$TRAVIS_BUILD_NUMBER.html
+mv gt_$LANGTWO.html index-$LANGTWO.html
+
+echo "<html><head><title>Tesseract LSTM Evaluation for Devanagari</title></head><body><ul><li><a href=index-$LANGTWO.html>Using $LANGTWO Traineddata</a></li><li><a href=index-$LANG.html>Using $LANG Traineddata</a></li></ul></body></html>" > index.html
