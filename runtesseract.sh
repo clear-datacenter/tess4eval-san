@@ -3,6 +3,7 @@
 mkdir ${TRAVIS_BUILD_DIR}/${LANG}
 mkdir ${TRAVIS_BUILD_DIR}/$LANGTWO}
 mkdir ${TRAVIS_BUILD_DIR}/gt
+mkdir $TRAVIS_BUILD_DIR/out
 
 cd ${TRAVIS_BUILD_DIR}/imageshin-save/imageshin
 echo "Images from Shreeshrii/imageshin"
