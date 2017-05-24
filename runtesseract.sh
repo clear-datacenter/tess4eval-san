@@ -1,8 +1,8 @@
 #!/bin/bash
 
-mkdir ./out
-mkdir ./ocr
-mkdir ./gt
+mkdir ${TRAVIS_BUILD_DIR}/${LANG}
+mkdir ${TRAVIS_BUILD_DIR}/$LANGTWO}
+mkdir ${TRAVIS_BUILD_DIR}/gt
 
 cd ${TRAVIS_BUILD_DIR}/imageshin-save/imageshin
 echo "Images from Shreeshrii/imageshin"
@@ -11,7 +11,8 @@ echo "Images from Shreeshrii/imageshin"
         filename=$(basename "${img_file##*/}" .png)
         echo ${img_file}
         cp ${filename}.txt ${TRAVIS_BUILD_DIR}/gt
-        tesseract ${img_file} ${TRAVIS_BUILD_DIR}/ocr/${filename} --psm 6 --oem 1 -l $LANG 
+        tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANG}/${filename} --psm 6 --oem 1 -l $LANG 
+        tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANGTWO}/${filename} --psm 6 --oem 1 -l $LANGTWO 
     done   
     
       
@@ -22,5 +23,6 @@ echo "Images from Shreeshrii/imageshin"
         filename=$(basename "${img_file##*/}" .png)
         echo ${img_file}
         cp ${filename}.txt ${TRAVIS_BUILD_DIR}/gt
-        tesseract  ${img_file}  ${TRAVIS_BUILD_DIR}/ocr/${filename} --psm 6 --oem 1 -l $LANG 
+        tesseract  ${img_file}  ${TRAVIS_BUILD_DIR}/${LANG}/${filename} --psm 6 --oem 1 -l $LANG 
+        tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANGTWO}/${filename} --psm 6 --oem 1 -l $LANGTWO 
     done   
