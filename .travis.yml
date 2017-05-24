@@ -33,7 +33,5 @@ script:
 - mv $TRAVIS_BUILD_DIR/out/gt_out.html $TRAVIS_BUILD_DIR/out/gt_$LANG.html
 - java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt $TRAVIS_BUILD_DIR/gt -ocr $TRAVIS_BUILD_DIR/$LANGTWO  utf8 -d $TRAVIS_BUILD_DIR/out
 - mv $TRAVIS_BUILD_DIR/out/gt_out.html $TRAVIS_BUILD_DIR/out/gt_$LANGTWO.html
-
-deploy:
 - bash ./6deploy.sh
 - bash ./7update-gh-pages.sh
