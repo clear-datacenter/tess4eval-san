@@ -16,8 +16,9 @@ cache:
   - tess4-save
   - tess4data-save
 before_script:
-- echo "before script, bash ./1createcache.sh"
+- echo "before script, bash ./0createcache.sh"
 script:
+- bash ./1createcache.sh
 - bash ./2installesseract.sh
 - bash ./3get-gh-pages.sh
 - bash ./4runtesseract.sh
