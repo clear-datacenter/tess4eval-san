@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATE=$(date +%F)
+DATE=$(date +%d/%m/%Y_%H:%M:%S)
 echo ${DATE}
 
 cd ./out
