@@ -7,7 +7,7 @@ mkdir $TRAVIS_BUILD_DIR/out
 
 cd ${TRAVIS_BUILD_DIR}/imageshin-save/imageshin
 echo "Images from Shreeshrii/imageshin"
-    img_files=$(ls *gal*.png)
+    img_files=$(ls *.png)
     for img_file in ${img_files}; do
         filename=$(basename "${img_file##*/}" .png)
         echo ${img_file}
@@ -19,7 +19,7 @@ echo "Images from Shreeshrii/imageshin"
       
  cd ${TRAVIS_BUILD_DIR}/imagesbih-save/imagesbih
  echo "Images from Shreeshrii/imagesbih - png files "
-    img_files=$(ls *gal*.png)
+    img_files=$(ls *.png)
     for img_file in ${img_files}; do
         filename=$(basename "${img_file##*/}" .png)
         echo ${img_file}
