@@ -13,6 +13,7 @@ cache:
   - imagesbih-save
   - imageshin-save
   - imagessan-save
+  - imagesdeva-save
   - jar
   - tess4-save
   - tess4data-save
@@ -20,7 +21,7 @@ cache:
 
 before_install:
 #- bash ./0createcache.sh"
-#- bash ./1createcache.sh
+- bash ./1createcache.sh
 
 install:
 - bash ./2installtesseract.sh
