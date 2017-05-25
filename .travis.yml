@@ -21,17 +21,17 @@ cache:
 
 before_install:
 #- bash ./0createcache.sh"
-- bash ./1createcache.sh
+#- bash ./1createcache.sh
 
 install:
 - bash ./2installtesseract.sh
 
 before_script:
 - bash ./3get-gh-pages.sh
-
-script:
 #- bash ./4runtesseract.sh # hindi and bihari images
 - bash ./5runtesseract.sh # sanskrit images
+
+script:
 - java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt $TRAVIS_BUILD_DIR/gt -ocr $TRAVIS_BUILD_DIR/$LANG     utf8 -d $TRAVIS_BUILD_DIR/out
 - mv $TRAVIS_BUILD_DIR/out/gt_out.html $TRAVIS_BUILD_DIR/out/gt_$LANG.html
 - java -cp ./jar/ocrevaluation.jar  eu.digitisation.Main  -gt $TRAVIS_BUILD_DIR/gt -ocr $TRAVIS_BUILD_DIR/$LANGTWO  utf8 -d $TRAVIS_BUILD_DIR/out
