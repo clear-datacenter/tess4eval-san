@@ -13,8 +13,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
   #go into directory and copy data we're interested in to that directory
   cd gh-pages
-  rm index.html
-  
+ 
   cp -f *.html $TRAVIS_BUILD_DIR/out/
 
   echo -e "Got *.html from gh-pages\n"
