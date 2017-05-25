@@ -16,3 +16,10 @@ echo "create tesseract 4 dev cache"
  git submodule add https://github.com/Shreeshrii/imagessan
  mv /home/travis/build/Shreeshrii/tess4eval/imagessan imagessan-save
  ls -l imagessan-save
+
+ rm -rf imagesdeva-save
+ mkdir imagesdeva-save
+ git submodule add https://github.com/Shreeshrii/tess4eval_deva
+ mv /home/travis/build/Shreeshrii/tess4eval/tess4eval_deva imagesdeva-save
+ ls -l imagesdeva-save
+ 
