@@ -27,9 +27,9 @@ wget -O ./tess4dev-save/tesseract-ocr-dev.deb https://launchpad.net/~alex-p/+arc
 rm -rf imagesbih-save
 mkdir imagesbih-save
 git submodule add https://github.com/Shreeshrii/imagesbih
-mv  $TRAVIS_BUILD_DIR/Shreeshrii/tess4eval/imagesbih imagesbih-save
+mv  $TRAVIS_BUILD_DIR/imagesbih imagesbih-save
    
 rm -rf imageshin-save
 mkdir imageshin-save
 git submodule add https://github.com/Shreeshrii/imageshin
-mv $TRAVIS_BUILD_DIR/Shreeshrii/tess4eval/imageshin imageshin-save 
+mv $TRAVIS_BUILD_DIR/imageshin imageshin-save 
