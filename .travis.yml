@@ -20,7 +20,7 @@ cache:
   - tess4dev-save
 
 before_install:
-- bash ./0createcache.sh"
+- bash ./0createcache.sh
 - bash ./1createcache.sh
 
 install:
