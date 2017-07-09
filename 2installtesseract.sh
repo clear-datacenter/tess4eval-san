@@ -28,3 +28,7 @@ sudo cp ./tess4data-save/hinlayer.traineddata /usr/share/tesseract-ocr/4.00/tess
 #tesseract -v
 tesseract --list-langs
 #tesseract ./tif/phototest.tif stdout --oem 1 -l eng
+
+mkdir ${TRAVIS_BUILD_DIR}/${LANG}
+mkdir ${TRAVIS_BUILD_DIR}/${LANGTWO}
+mkdir ${TRAVIS_BUILD_DIR}/gt
