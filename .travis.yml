@@ -28,7 +28,7 @@ install:
 
 before_script:
 - bash ./3get-gh-pages.sh
-#- bash ./4runtesseract.sh # hindi and bihari images
+- bash ./4runtesseract.sh # hindi and bihari images
 - bash ./5runtesseract.sh # sanskrit images
 
 script:
