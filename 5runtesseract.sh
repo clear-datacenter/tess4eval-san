@@ -1,9 +1,5 @@
 #!/bin/bash
 
-mkdir ${TRAVIS_BUILD_DIR}/${LANG}
-mkdir ${TRAVIS_BUILD_DIR}/${LANGTWO}
-mkdir ${TRAVIS_BUILD_DIR}/gt
-
 cd ${TRAVIS_BUILD_DIR}/imagessan-save/imagessan/groundtruthimages
 echo "Images from Shreeshrii/imagessan"
 img_files=$(ls *.png)
