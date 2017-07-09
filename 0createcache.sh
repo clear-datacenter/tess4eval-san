@@ -33,3 +33,16 @@ rm -rf imageshin-save
 mkdir imageshin-save
 git submodule add https://github.com/Shreeshrii/imageshin
 mv $TRAVIS_BUILD_DIR/imageshin imageshin-save 
+
+ rm -rf imagessan-save
+ mkdir imagessan-save
+ git submodule add https://github.com/Shreeshrii/imagessan
+ mv  $TRAVIS_BUILD_DIR/imagessan imagessan-save
+ ls -l imagessan-save
+
+ rm -rf imagesdeva-save
+ mkdir imagesdeva-save
+ git submodule add https://github.com/Shreeshrii/tess4eval_deva
+ mv  $TRAVIS_BUILD_DIR/tess4eval_deva imagesdeva-save
+ ls -l imagesdeva-save
+ 
