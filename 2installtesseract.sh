@@ -21,8 +21,9 @@ sudo apt-get install -f
 sudo dpkg -i  ./tess4dev-save/tesseract-ocr.deb 
 sudo apt-get install -f
 
-# ls /usr/share/tesseract-ocr/4.00/tessdata
-#tesseract -v
+sudo cp ./tess4data-save/bihtune.traineddata /usr/share/tesseract-ocr/4.00/tessdata
+ls /usr/share/tesseract-ocr/4.00/tessdata
+
 tesseract --list-langs
 #tesseract ./tif/phototest.tif stdout --oem 1 -l eng
 
