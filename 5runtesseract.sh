@@ -11,11 +11,11 @@ img_files=$(ls *.png)
         tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANGTWO}/${filename} --psm 6 --oem 1 -l $LANGTWO 
     done   
 
-# DO NOT PROCESS OLD STYLE IMAGES - ZZZ    
+# to NOT PROCESS OLD STYLE IMAGES - change *.png to ZZZ*.png    and ZZZ*.tif
 
 cd ${TRAVIS_BUILD_DIR}/imagessan-save/imagessan/oldstylefontsamples
 echo "Images from Shreeshrii/imagessan/oldstylefontsamples"
-img_files=$(ls ZZZ*.png)
+img_files=$(ls *.png)
     for img_file in ${img_files}; do
         filename=$(basename "${img_file##*/}" .png)
         echo ${img_file}
@@ -23,7 +23,7 @@ img_files=$(ls ZZZ*.png)
         tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANG}/${filename} --psm 6 --oem 1 -l $LANG 
         tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANGTWO}/${filename} --psm 6 --oem 1 -l $LANGTWO 
     done      
-img_files=$(ls ZZZ*.tif)
+img_files=$(ls *.tif)
     for img_file in ${img_files}; do
         filename=$(basename "${img_file##*/}" .tif)
         echo ${img_file}
@@ -32,11 +32,11 @@ img_files=$(ls ZZZ*.tif)
         tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANGTWO}/${filename} --psm 6 --oem 1 -l $LANGTWO 
     done  
     
-# DO NOT PROCESS OLD STYLE IMAGES - ZZZ    
+# to  NOT PROCESS OLD STYLE IMAGES - add ZZZ    before *.png
     
 cd ${TRAVIS_BUILD_DIR}/imagesdeva-save/tess4eval_deva/images
 echo "Images from Shreeshrii/tess4eval_deva"
-img_files=$(ls ZZZ*.png)
+img_files=$(ls *.png)
     for img_file in ${img_files}; do
         filename=$(basename "${img_file##*/}" .png)
         echo ${img_file}
