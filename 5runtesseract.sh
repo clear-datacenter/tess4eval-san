@@ -11,11 +11,11 @@ img_files=$(ls *.png)
         tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANGTWO}/${filename} --psm 6 --oem 1 -l $LANGTWO 
     done   
 
-# to NOT PROCESS OLD STYLE IMAGES - change *.png to ZZZ*.png    and ZZZ*.tif
+# to NOT PROCESS OLD STYLE IMAGES - change *.png to ZZZ*.png (gudakesa)   and ZZZ*.tif (santipur)
 
 cd ${TRAVIS_BUILD_DIR}/imagessan-save/imagessan/oldstylefontsamples
 echo "Images from Shreeshrii/imagessan/oldstylefontsamples"
-img_files=$(ls *.png)
+img_files=$(ls ZZZ*.png)
     for img_file in ${img_files}; do
         filename=$(basename "${img_file##*/}" .png)
         echo ${img_file}
@@ -28,15 +28,16 @@ img_files=$(ls *.tif)
         filename=$(basename "${img_file##*/}" .tif)
         echo ${img_file}
         cp ${filename}.txt ${TRAVIS_BUILD_DIR}/gt
-        tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANG}/${filename} --psm 6 --oem 1 -l $LANG 
-        tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANGTWO}/${filename} --psm 6 --oem 1 -l $LANGTWO 
+        tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANG}/${filename} --psm 6 --oem 1 -l $LANG -c tessedit_page_number=0
+        tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANGTWO}/${filename} --psm 6 --oem 1 -l $LANGTWO -c tessedit_page_number=0
     done  
     
 # to  NOT PROCESS OLD STYLE IMAGES - add ZZZ    before *.png
+# these are just alphabets and glyphs and get lot of errors
     
 cd ${TRAVIS_BUILD_DIR}/imagesdeva-save/tess4eval_deva/images
 echo "Images from Shreeshrii/tess4eval_deva"
-img_files=$(ls *.png)
+img_files=$(ls ZZZ*.png)
     for img_file in ${img_files}; do
         filename=$(basename "${img_file##*/}" .png)
         echo ${img_file}
