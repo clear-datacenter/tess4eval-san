@@ -3,7 +3,7 @@ sudo: required
 language: java
 env:
   global:
-  - LANG: hin
+  - LANG: san
   - LANGTWO: bihtune
   - GITHUB_REPO: Shreeshrii/tess4eval
 git:
