@@ -28,8 +28,8 @@ img_files=$(ls *.tif)
         filename=$(basename "${img_file##*/}" .tif)
         echo ${img_file}
         cp ${filename}.txt ${TRAVIS_BUILD_DIR}/gt
-        tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANG}/${filename} --psm 6 --oem 1 -l $LANG -c tessedit_page_number=0
-        tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANGTWO}/${filename} --psm 6 --oem 1 -l $LANGTWO -c tessedit_page_number=0
+        tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANG}/${filename} --psm 6 --oem 1 -l $LANG+eng
+        tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANGTWO}/${filename} --psm 6 --oem 1 -l $LANGTWO+eng
     done  
     
 # to  NOT PROCESS OLD STYLE IMAGES - add ZZZ    before *.png
