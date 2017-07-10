@@ -13,6 +13,7 @@ wget -O ./tess4-save/liblept5.deb https://launchpad.net/~alex-p/+archive/ubuntu/
 wget -O ./tess4-save/tesseract-ocr-eng.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/tesseract-ocr-eng_4.00~git11-8bf2e7a-2ppa1~trusty1_all.deb
 wget -O ./tess4-save/tesseract-ocr-osd.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/tesseract-ocr-osd_4.00~git11-8bf2e7a-2ppa1~trusty1_all.deb
 wget -O ./tess4-save/tesseract-ocr-hin.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/tesseract-ocr-hin_4.00~git11-8bf2e7a-2ppa1~trusty1_all.deb
+wget -O ./tess4-save/tesseract-ocr-san.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/tesseract-ocr-san_4.00~git11-8bf2e7a-2ppa1~trusty1_all.deb
 
 
 echo "create tesseract-dev cache"
