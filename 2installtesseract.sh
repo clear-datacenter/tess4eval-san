@@ -14,6 +14,8 @@ sudo dpkg -i  ./tess4-save/tesseract-ocr-eng.deb
 sudo apt-get install -f
 sudo dpkg -i  ./tess4-save/tesseract-ocr-hin.deb 
 sudo apt-get install -f
+sudo dpkg -i  ./tess4-save/tesseract-ocr-san.deb 
+sudo apt-get install -f
 
 sudo dpkg -i  ./tess4dev-save/libtesseract4.deb 
 sudo apt-get install -f
