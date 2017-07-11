@@ -23,7 +23,7 @@ img_files=$(ls ZZZ*.png)
         tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANG}/${filename} --psm 6 --oem 1 -l $LANG 
         tesseract ${img_file} ${TRAVIS_BUILD_DIR}/${LANGTWO}/${filename} --psm 6 --oem 1 -l $LANGTWO 
     done      
-img_files=$(ls *.tif)
+img_files=$(ls ZZZ*.tif)
     for img_file in ${img_files}; do
         filename=$(basename "${img_file##*/}" .tif)
         echo ${img_file}
