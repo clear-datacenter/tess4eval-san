@@ -8,6 +8,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   
   #go into directory and copy data we're interested in to that directory
   cd gh-pages
+  rm *.*
   cp -Rf $TRAVIS_BUILD_DIR/out/* .
 
   #add, commit and push files
@@ -15,5 +16,5 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
   git push -fq origin gh-pages > /dev/null
   
-  echo -e "Done magic :-) Updated https://shreeshrii.github.io/tess4eval/  \n"
+  echo -e "Updated https://shreeshrii.github.io/tess4eval/  \n"
 fi
