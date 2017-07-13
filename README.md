@@ -1,6 +1,6 @@
-# Evaluate LSTM engine of tesseract OCR for Sanskrit
+## Evaluate LSTM engine of tesseract OCR for Sanskrit
 
-## Uses
+## Useing the following
 
 * [Travis-ci to run the OCR evaluation](https://travis-ci.org/Shreeshrii/tess4eval)
 * [Tesseract OCR 4.0 LSTM Engine and Traineddata] (https://github.com/tesseract-ocr)
@@ -17,5 +17,5 @@
 
 ## OCR evaluation reports
 
-* [Generated OCR evaluation report](https://shreeshrii.github.io/tess4eval/)
+* [Generated OCR evaluation report](https://shreeshrii.github.io/tess4eval-san/)
 
