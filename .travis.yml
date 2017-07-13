@@ -5,7 +5,7 @@ env:
   global:
   - LANG: san
   - LANGTWO: bihtune
-  - GITHUB_REPO: Shreeshrii/tess4eval
+  - GITHUB_REPO: Shreeshrii/tess4eval-san
 git:
   depth: 3
 cache:
