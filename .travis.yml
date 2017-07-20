@@ -4,7 +4,7 @@ language: java
 env:
   global:
   - LANG: san
-  - LANGTWO: bihtune
+  - LANGTWO: sannew
   - GITHUB_REPO: Shreeshrii/tess4eval-san
 git:
   depth: 3
