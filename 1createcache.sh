@@ -2,7 +2,7 @@
 
  rm -rf ./tess4data-save
  mkdir ./tess4data-save
- wget -O ./tess4data-save/${LANGNEW}.traineddata \
+ wget -O ./tess4data-save/${LANGTWO}.traineddata \
          https://github.com/Shreeshrii/tess4training/blob/master/docs/sannew.traineddata?raw=true
  
  ### https://github.com/Shreeshrii/tess4training/blob/a09bbe913b25b0e623f1bc267a60b192d8e0ccc6/san.traineddata?raw=true
