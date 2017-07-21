@@ -2,7 +2,8 @@
 
 ### Using the following
 
-* [Tesseract OCR 4.00.00alpha LSTM Engine and Traineddata](https://github.com/tesseract-ocr/tesseract)
+* [Tesseract OCR 4.00.00alpha LSTM Engine](https://github.com/tesseract-ocr/tesseract)
+* [Tesseract OCR 4.00.00alpha Traineddata](https://github.com/tesseract-ocr/tessdata)
 * [Travis-ci to run the OCR evaluation](https://travis-ci.org/Shreeshrii/tess4eval-san)
 * [ImpactOCR's ocrevaluation.jar ](https://bintray.com/impactocr/maven/download_file?file_path=eu%2Fdigitisation%2FocrevalUAtion%2F1.3.0%2FocrevalUAtion-1.3.0-jar-with-dependencies.jar%20script:)
 
