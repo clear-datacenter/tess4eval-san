@@ -20,8 +20,9 @@ sudo apt-get install -f
 sudo dpkg -i  ./tess4dev-save/libtesseract4.deb 
 sudo apt-get install -f
 
-sudo dpkg -i  ./tess4dev-save/tesseract-ocr.deb 
-sudo apt-get install -f
+sudo add-apt-repository -y ppa:alex-p/tesseract-ocr
+sudo apt-get update
+sudo apt-get --yes --force-yes install  tesseract-ocr
 
 sudo cp ./tess4data-save/${LANGTWO}.traineddata /usr/share/tesseract-ocr/4.00/tessdata
 ls /usr/share/tesseract-ocr/4.00/tessdata
