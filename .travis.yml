@@ -17,7 +17,6 @@ cache:
   - jar
   - tess4-save
   - tess4data-save
-  - tess4dev-save
 
 before_install:
 - bash ./0createcache.sh
