@@ -10,3 +10,6 @@ echo -e "<html><head><title>Tesseract OCR - LSTM - Sanskrit</title></head>" \
 "<li><a href=index-$LANG.html>OCRed using $LANG traineddata from tessdata repo</a></li></ul>" \
 "<ul><li><a href=index-$LANGTWO.html>OCRed using $LANGTWO traineddata from current training</a></li>" \
 "</body></html>" > index.html
+
+sed -i -e "s/General results/General results - Build $TRAVIS_BUILD_NUMBER/g" index-$LANGTWO.html
+head -20  index-$LANGTWO.html
