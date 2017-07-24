@@ -15,16 +15,6 @@ wget -O ./tess4-save/tesseract-ocr-osd.deb https://launchpad.net/~alex-p/+archiv
 wget -O ./tess4-save/tesseract-ocr-hin.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/tesseract-ocr-hin_4.00~git11-8bf2e7a-2ppa1~trusty1_all.deb
 wget -O ./tess4-save/tesseract-ocr-san.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/tesseract-ocr-san_4.00~git11-8bf2e7a-2ppa1~trusty1_all.deb
 
-
-echo "create tesseract-dev cache"
-
-rm -rf ./tess4dev-save
-mkdir ./tess4dev-save
-wget -O ./tess4dev-save/libtesseract4.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/libtesseract4_4.00~git2040-2b854e3-1ppa1~trusty1_amd64.deb
-wget -O ./tess4dev-save/tesseract-ocr.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/tesseract-ocr_4.00~git2040-2b854e3-1ppa1~trusty1_amd64.deb
-wget -O ./tess4dev-save/libtesseract4-dev.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/libtesseract-dev_4.00~git2040-2b854e3-1ppa1~trusty1_amd64.deb
-wget -O ./tess4dev-save/tesseract-ocr-dev.deb https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr/+files/tesseract-ocr-dev_4.00~git2040-2b854e3-1ppa1~trusty1_all.deb
-
 rm -rf imagesbih-save
 mkdir imagesbih-save
 git submodule add https://github.com/Shreeshrii/imagesbih
