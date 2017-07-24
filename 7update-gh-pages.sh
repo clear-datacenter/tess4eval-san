@@ -10,6 +10,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   cd gh-pages
   rm *.*
   cp -Rf $TRAVIS_BUILD_DIR/out/* .
+  cp  /usr/share/tesseract-ocr/4.00/tessdata/${NEWLANG}.traineddata ./
 
   #add, commit and push files
   git add -f .
