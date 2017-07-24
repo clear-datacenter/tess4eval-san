@@ -1,5 +1,4 @@
 #!/bin/bash
-# use either this or 5 - both mkdir 
 
 cd ${TRAVIS_BUILD_DIR}/imageshin-save/imageshin
 echo "Images from Shreeshrii/imageshin"
